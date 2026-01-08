@@ -5,11 +5,11 @@ export const BUSINESS_INFO = {
     name: "Perfect Care Lawn & Gardening",
     phone: "0225156889", // TODO: Replace with real phone number
     email: "perfectcarea1@gmail.com", // TODO: Replace with real email
-    whatsapp: "0225156889", // TODO: Replace with real WhatsApp number (no + or spaces)
+    whatsapp: "64225156889", // Updated for correct wa.me redirection (international format)
     location: "Ninth Avenue, Tauranga 3110, New Zealand", // TODO: Replace with actual service area
     serviceAreas: [
-        "Tauranga", 
-        "Greerton", 
+        "Tauranga",
+        "Greerton",
         "papamoa",
         "mount maunganui",
         "Welcome bay",

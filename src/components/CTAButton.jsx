@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const CTAButton = ({ href, label, variant = "primary", className = "" }) => {
+const CTAButton = ({ href, label, variant = "primary", className = "", ...props }) => {
     const base =
         "inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition duration-200 shadow-md hover:shadow-lg";
 
@@ -9,11 +9,16 @@ const CTAButton = ({ href, label, variant = "primary", className = "" }) => {
         secondary: "bg-white text-brand border-2 border-brand hover:bg-brand-light hover:text-brand",
     };
 
+    const isExternal = href.startsWith("http") || href.startsWith("https");
+
     return (
         <a
             href={href}
             className={`${base} ${variants[variant]} ${className}`}
             aria-label={label}
+            target={isExternal ? "_blank" : undefined}
+            rel={isExternal ? "noopener noreferrer" : undefined}
+            {...props}
         >
             {label}
         </a>
