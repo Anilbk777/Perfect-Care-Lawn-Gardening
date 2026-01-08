@@ -149,6 +149,12 @@ const Home = () => {
                             variant="secondary"
                             className="text-lg px-8 py-4"
                         />
+                        <CTAButton
+                            href={`mailto:${BUSINESS_INFO.email}`}
+                            label="Email Us"
+                            variant="secondary"
+                            className="text-lg px-8 py-4"
+                        />
                         <Link to="/contact">
                             <CTAButton
                                 href="/contact"

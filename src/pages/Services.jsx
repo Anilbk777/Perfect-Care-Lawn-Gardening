@@ -167,6 +167,11 @@ const Services = () => {
                             label="WhatsApp Us"
                             variant="secondary"
                         />
+                        <CTAButton
+                            href={`mailto:${BUSINESS_INFO.email}`}
+                            label="Email Us"
+                            variant="secondary"
+                        />
                         <Link to="/contact">
                             <CTAButton
                                 href="/contact"

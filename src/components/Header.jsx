@@ -107,6 +107,12 @@ const Header = () => {
 
                     <div className="mt-4 space-y-2">
                         <CTAButton
+                            href={`mailto:${BUSINESS_INFO.email}`}
+                            label="Email Us"
+                            variant="secondary"
+                            className="w-full justify-center"
+                        />
+                        <CTAButton
                             href={`tel:${BUSINESS_INFO.phone}`}
                             label="Call Now"
                             variant="primary"
