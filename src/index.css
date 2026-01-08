@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-gray-800 leading-relaxed bg-white;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl font-bold text-gray-900;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl font-semibold text-gray-900;
+  }
+
+  h3 {
+    @apply text-xl font-semibold text-gray-900;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+
+  /* Use :where to keep specificity at (0,0,1) so utilities like text-white still work */
+  :where(a:not([class*="bg-"])) {
+    @apply text-brand hover:text-brand-dark transition-colors duration-200;
+  }
+}
