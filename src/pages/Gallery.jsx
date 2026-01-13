@@ -8,6 +8,12 @@ const Gallery = () => {
     // TODO: Replace with real photos of your actual work
     const galleryImages = [
         {
+            image: "/images/video1.mp4",
+            alt: "Lawn care video demonstration",
+            title: "Lawn Care in Action",
+            type: "video",
+        },
+        {
             image: "/images/gallery-01.jpg",
             alt: "Beautifully maintained lawn with perfect stripes in Auckland",
             title: "Perfect Lawn Stripes",
@@ -37,7 +43,16 @@ const Gallery = () => {
             alt: "Lush green lawn care result",
             title: "Healthy Green Lawn",
         },
-
+        {
+            image: "/images/image1.jpg",
+            alt: "image1",
+            title: "image1",
+        },
+        {
+            image: "/images/image2.jpg",
+            alt: "image2 ",
+            title: "image2",
+        },
     ];
 
     return (
@@ -68,7 +83,7 @@ const Gallery = () => {
                             key={index}
                             image={item.image}
                             alt={item.alt}
-                            title={item.title}
+                            type={item.type}
                         />
                     ))}
                 </div>
