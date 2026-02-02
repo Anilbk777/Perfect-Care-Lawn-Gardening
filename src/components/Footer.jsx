@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { BUSINESS_INFO } from "../utils/constants";
-import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
+import { BUSINESS_INFO, SOCIAL_MEDIA } from "../utils/constants";
+import { Phone, Mail, MessageCircle, MapPin, Facebook } from "lucide-react";
 
 const Footer = () => {
     return (
@@ -89,7 +89,40 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="text-center text-sm py-6 border-t border-brand-dark mt-4">
+            <div className="text-center py-6 border-t border-brand-dark mt-4">
+                <div className="flex justify-center space-x-6 mb-4">
+                    <a
+                        href={SOCIAL_MEDIA.facebook}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white hover:text-brand-light transition-colors p-2 rounded-full bg-white/10 hover:bg-white/20"
+                        title="Follow us on Facebook"
+                    >
+                        <Facebook size={24} />
+                    </a>
+                    <a
+                        href={SOCIAL_MEDIA.tiktok}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white hover:text-brand-light transition-colors p-2 rounded-full bg-white/10 hover:bg-white/20"
+                        title="Follow us on TikTok"
+                    >
+                        {/* Custom SVG for TikTok if not in lucide-react or just using a placeholder if needed */}
+                        <svg
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            fill="none"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="w-6 h-6"
+                        >
+                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                        </svg>
+                    </a>
+                </div>
                 <p className="text-gray-200">© {new Date().getFullYear()} Perfect Care Lawn & Gardening. All rights reserved.</p>
             </div>
         </footer>
