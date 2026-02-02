@@ -1,10 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-NZ">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/jpeg" href="/images/perfect_care_lawn_&_gardening.jpg" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/images/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://perfectcarelawn.co.nz/" />
+
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,18 +19,127 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Primary Meta Tags -->
-  <title>Perfect Care Lawn & Gardening | Professional Lawn Care in New Zealand</title>
-  <meta name="title" content="Perfect Care Lawn & Gardening | Professional Lawn Care in New Zealand" />
+  <title>Perfect Care Lawn & Gardening | Professional Lawn Care in Tauranga, NZ</title>
+  <meta name="title" content="Perfect Care Lawn & Gardening | Professional Lawn Care in Tauranga, NZ" />
   <meta name="description"
-    content="Professional lawn mowing and gardening services in New Zealand. Get a free quote today for lawn care, garden maintenance, and landscaping services." />
+    content="Professional lawn mowing and gardening services in Tauranga, New Zealand. Get a free quote today for lawn care, garden maintenance, and landscaping services." />
   <meta name="keywords"
-    content="lawn mowing, gardening services, lawn care, garden maintenance, New Zealand, professional lawn service" />
+    content="lawn mowing Tauranga, gardening services NZ, lawn care Tauranga, garden maintenance New Zealand, professional lawn service, Tauranga gardeners" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://perfectcarelawn.co.nz/" />
+  <meta property="og:title" content="Perfect Care Lawn & Gardening | Professional Lawn Care in Tauranga, NZ" />
+  <meta property="og:description"
+    content="Professional lawn mowing and gardening services in Tauranga. Get a free quote today!" />
+  <meta property="og:image" content="https://perfectcarelawn.co.nz/images/hero-lawn.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://perfectcarelawn.co.nz/" />
+  <meta property="twitter:title" content="Perfect Care Lawn & Gardening | Professional Lawn Care in Tauranga, NZ" />
+  <meta property="twitter:description"
+    content="Professional lawn mowing and gardening services in Tauranga. Get a free quote today!" />
+  <meta property="twitter:image" content="https://perfectcarelawn.co.nz/images/hero-lawn.jpg" />
 
   <!-- Theme Color -->
   <meta name="theme-color" content="#15803d" />
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LawnCareBusiness",
+  "name": "Perfect Care Lawn & Gardening",
+  "image": "https://perfectcarelawn.co.nz/images/favicon.png",
+  "@id": "https://perfectcarelawn.co.nz",
+  "url": "https://perfectcarelawn.co.nz",
+  "telephone": "+64225156889",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ninth Avenue",
+    "addressLocality": "Tauranga",
+    "postalCode": "3110",
+    "addressCountry": "NZ"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -37.6874,
+    "longitude": 176.1664
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "16:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Tauranga"
+    },
+    {
+      "@type": "City",
+      "name": "Greerton"
+    },
+    {
+      "@type": "City",
+      "name": "Papamoa"
+    },
+    {
+      "@type": "City",
+      "name": "Mount Maunganui"
+    },
+    {
+      "@type": "City",
+      "name": "Welcome Bay"
+    },
+    {
+      "@type": "City",
+      "name": "Otumoetai"
+    },
+    {
+      "@type": "City",
+      "name": "Judea"
+    }
+  ],
+  "priceRange": "$",
+  "serviceType": [
+    "Lawn Mowing",
+    "Garden Maintenance",
+    "Landscaping",
+    "Lawn Care",
+    "Hedge Trimming",
+    "Weeding",
+    "Fertilizing",
+    "Pruning",
+    "Mulching",
+    "Seasonal Cleanup"
+  ]
+}
+</script>
+
 </head>
 
 <body>
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-brand">
+    Skip to content
+  </a>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
