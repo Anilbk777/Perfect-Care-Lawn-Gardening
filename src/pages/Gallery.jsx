@@ -8,6 +8,42 @@ const Gallery = () => {
     // TODO: Replace with real photos of your actual work
     const galleryImages = [
         {
+            image: "/images/image3.jpeg",
+            alt: "Beautifully maintained lawn with perfect stripes in Auckland",
+            title: "Perfect Lawn Stripes",
+        },
+        {
+            image: "/images/image4.jpeg",
+            alt: "Beautifully maintained lawn with perfect stripes in Auckland",
+            title: "Perfect Lawn Stripes",
+        },
+        {
+            image: "/images/image5.jpeg",
+            alt: "Beautifully maintained lawn with perfect stripes in Auckland",
+            title: "Perfect Lawn Stripes",
+        },
+        {
+            image: "/images/image6.jpeg",
+            alt: "Beautifully maintained lawn with perfect stripes in Auckland",
+            title: "Perfect Lawn Stripes",
+        },
+        {
+            image: "/images/image7.jpeg",
+            alt: "Beautifully maintained lawn with perfect stripes in Auckland",
+            title: "Perfect Lawn Stripes",
+        },
+        {
+            image: "/images/image8.jpeg",
+            alt: "Beautifully maintained lawn with perfect stripes in Auckland",
+            title: "Perfect Lawn Stripes",
+        },
+        {
+            image: "/images/image9.jpeg",
+            alt: "Beautifully maintained lawn with perfect stripes in Auckland",
+            title: "Perfect Lawn Stripes",
+        },
+
+        {
             image: "/images/video1.mp4",
             alt: "Lawn care video demonstration",
             title: "Lawn Care in Action",
