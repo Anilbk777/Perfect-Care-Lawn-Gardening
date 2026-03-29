@@ -1,5 +1,4 @@
 import SEOHead from "../components/SEOHead.jsx";
-import ContactForm from "../components/ContactForm.jsx";
 import MapSection from "../components/MapSection.jsx";
 import { SEO_CONFIG } from "../utils/seo";
 import { BUSINESS_INFO, BUSINESS_HOURS } from "../utils/constants";
@@ -26,121 +25,129 @@ const Contact = () => {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-12">
-                    {/* Contact Form */}
-                    <div className="order-2 md:order-1">
-                        <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                                Send Us a Message
-                            </h2>
-                            <ContactForm />
+                {/* Contact Information Cards - 3 Column Grid */}
+                <div className="grid md:grid-cols-3 gap-8 mb-16">
+                    {/* Quick Contact Methods */}
+                    <div className="bg-brand text-white p-6 md:p-8 rounded-lg shadow-lg flex flex-col h-full hover:shadow-xl transition-shadow">
+                        <h2 className="text-2xl font-bold mb-6">
+                            Prefer to Call or Text?
+                        </h2>
+
+                        <div className="space-y-4">
+                            <a
+                                href={`tel:${BUSINESS_INFO.phone}`}
+                                className="flex items-start p-4 bg-white/10 hover:bg-white/20 rounded-lg transition group"
+                            >
+                                <Phone className="w-6 h-6 mr-4 mt-1" />
+                                <div>
+                                    <div className="font-semibold mb-1">Call Us</div>
+                                    <div className="text-gray-100 group-hover:underline">
+                                        {BUSINESS_INFO.phone}
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a
+                                href={`https://wa.me/${BUSINESS_INFO.whatsapp}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-start p-4 bg-white/10 hover:bg-white/20 rounded-lg transition group"
+                            >
+                                <MessageCircle className="w-6 h-6 mr-4 mt-1" />
+                                <div>
+                                    <div className="font-semibold mb-1">WhatsApp</div>
+                                    <div className="text-gray-100 group-hover:underline">
+                                        Message us anytime
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a
+                                href={`mailto:${BUSINESS_INFO.email}`}
+                                className="flex items-start p-4 bg-white/10 hover:bg-white/20 rounded-lg transition group"
+                            >
+                                <Mail className="w-6 h-6 mr-4 mt-1" />
+                                <div>
+                                    <div className="font-semibold mb-1">Email</div>
+                                    <div className="text-gray-100 group-hover:underline break-all">
+                                        {BUSINESS_INFO.email}
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
-                    {/* Contact Information */}
-                    <div className="order-1 md:order-2">
-                        {/* Quick Contact Methods */}
-                        <div className="bg-brand text-white p-6 md:p-8 rounded-lg shadow-lg mb-6">
-                            <h2 className="text-2xl font-bold mb-6">
-                                Prefer to Call or Text?
-                            </h2>
-
-                            <div className="space-y-4">
-                                <a
-                                    href={`tel:${BUSINESS_INFO.phone}`}
-                                    className="flex items-start p-4 bg-white/10 hover:bg-white/20 rounded-lg transition group"
-                                >
-                                    <Phone className="w-6 h-6 mr-4 mt-1" />
-                                    <div>
-                                        <div className="font-semibold mb-1">Call Us</div>
-                                        <div className="text-gray-100 group-hover:underline">
-                                            {BUSINESS_INFO.phone}
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a
-                                    href={`https://wa.me/${BUSINESS_INFO.whatsapp}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-start p-4 bg-white/10 hover:bg-white/20 rounded-lg transition group"
-                                >
-                                    <MessageCircle className="w-6 h-6 mr-4 mt-1" />
-                                    <div>
-                                        <div className="font-semibold mb-1">WhatsApp</div>
-                                        <div className="text-gray-100 group-hover:underline">
-                                            Message us anytime
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a
-                                    href={`mailto:${BUSINESS_INFO.email}`}
-                                    className="flex items-start p-4 bg-white/10 hover:bg-white/20 rounded-lg transition group"
-                                >
-                                    <Mail className="w-6 h-6 mr-4 mt-1" />
-                                    <div>
-                                        <div className="font-semibold mb-1">Email</div>
-                                        <div className="text-gray-100 group-hover:underline break-all">
-                                            {BUSINESS_INFO.email}
-                                        </div>
-                                    </div>
-                                </a>
+                    {/* Business Info */}
+                    <div className="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md border border-gray-100 flex flex-col h-full hover:shadow-xl transition-shadow">
+                        <h3 className="text-xl font-bold text-gray-900 mb-4">
+                            Service Area
+                        </h3>
+                        <div className="flex items-start mb-4">
+                            <MapPin className="w-6 h-6 mr-3 text-brand mt-1 flex-shrink-0" />
+                            <div>
+                                <p className="text-gray-700 font-medium">
+                                    {BUSINESS_INFO.location}
+                                </p>
+                                <p className="text-gray-600 text-sm mt-2">
+                                    We serve the following areas:
+                                </p>
+                                <ul className="mt-2 space-y-1">
+                                    {BUSINESS_INFO.serviceAreas.map((area, index) => (
+                                        <li key={index} className="text-gray-700 text-sm flex items-center">
+                                            <CheckCircle2 className="text-brand w-4 h-4 mr-2 flex-shrink-0" />
+                                            {area}
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         </div>
-
-                        {/* Business Info */}
-                        <div className="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md mb-6">
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">
-                                Service Area
-                            </h3>
-                            <div className="flex items-start mb-4">
-                                <MapPin className="w-6 h-6 mr-3 text-brand mt-1" />
-                                <div>
-                                    <p className="text-gray-700 font-medium">
-                                        {BUSINESS_INFO.location}
-                                    </p>
-                                    <p className="text-gray-600 text-sm mt-2">
-                                        We serve the following areas:
-                                    </p>
-                                    <ul className="mt-2 space-y-1">
-                                        {BUSINESS_INFO.serviceAreas.map((area, index) => (
-                                            <li key={index} className="text-gray-700 text-sm flex items-center">
-                                                <CheckCircle2 className="text-brand w-4 h-4 mr-2" />
-                                                {area}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <p className="text-gray-600 text-sm mt-3">
-                                        Don't see your area? Contact us anyway - we're always expanding!
-                                    </p>
-                                </div>
-                            </div>
+                        <div className="mt-auto pt-4 border-t border-gray-200">
+                            <p className="text-gray-600 text-sm">
+                                Don't see your area? Contact us anyway - we're always expanding!
+                            </p>
                         </div>
+                    </div>
 
-                        {/* Business Hours */}
-                        <div className="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md">
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">
-                                Business Hours
-                            </h3>
-                            <div className="space-y-2 text-gray-700">
-                                <p className="flex justify-between">
-                                    <span>Monday - Friday</span>
-                                    <span className="font-medium">7:00 AM - 6:00 PM</span>
-                                </p>
-                                <p className="flex justify-between">
-                                    <span>Saturday</span>
-                                    <span className="font-medium">8:00 AM - 4:00 PM</span>
-                                </p>
-                                <p className="flex justify-between">
-                                    <span>Sunday</span>
-                                    <span className="font-medium text-gray-500">Closed</span>
-                                </p>
-                            </div>
-                            <p className="text-sm text-gray-600 mt-4 flex items-center">
-                                <Smartphone size={16} className="mr-2 text-brand" />
+                    {/* Business Hours */}
+                    <div className="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md border border-gray-100 flex flex-col h-full hover:shadow-xl transition-shadow">
+                        <h3 className="text-xl font-bold text-gray-900 mb-4">
+                            Business Hours
+                        </h3>
+                        <div className="space-y-3 text-gray-700">
+                            <p className="flex justify-between border-b border-gray-200 pb-2">
+                                <span>Monday - Friday</span>
+                                <span className="font-medium">7:00 AM - 6:00 PM</span>
+                            </p>
+                            <p className="flex justify-between border-b border-gray-200 pb-2">
+                                <span>Saturday</span>
+                                <span className="font-medium">8:00 AM - 4:00 PM</span>
+                            </p>
+                            <p className="flex justify-between pb-2">
+                                <span>Sunday</span>
+                                <span className="font-medium text-gray-500">Closed</span>
+                            </p>
+                        </div>
+                        <div className="mt-auto pt-4 border-t border-gray-200">
+                            <p className="text-sm text-gray-600 flex items-start">
+                                <Smartphone size={16} className="mr-2 text-brand mt-0.5 flex-shrink-0" />
                                 Call or message anytime - we'll get back to you as soon as possible
                             </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Google Form Section - Centered */}
+                <div className="max-w-3xl mx-auto">
+                    <div className="bg-white p-4 md:p-8 rounded-lg shadow-xl border border-gray-100">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">
+                            Request a Detailed Quote
+                        </h2>
+                        <p className="text-gray-600 text-center mb-8">
+                            Fill out the form below and we will get back to you with an accurate estimate.
+                        </p>
+                        <div className="w-full flex justify-center overflow-hidden">
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdkJs-n7XbprT-EYShqqvsS44SCdfry_nrrZ1GZQG617yT_6A/viewform?embedded=true&hl=en" width="640" height="2002" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
                         </div>
                     </div>
                 </div>

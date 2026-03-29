@@ -115,13 +115,11 @@ const Home = () => {
                     </div>
 
                     <div className="text-center">
-                        <Link to="/services">
-                            <CTAButton
-                                href="/services"
-                                label="View All Services"
-                                variant="primary"
-                            />
-                        </Link>
+                        <CTAButton
+                            href="/services"
+                            label="View All Services"
+                            variant="primary"
+                        />
                     </div>
                 </div>
             </section>
@@ -155,14 +153,12 @@ const Home = () => {
                             variant="secondary"
                             className="text-lg px-8 py-4"
                         />
-                        <Link to="/contact">
-                            <CTAButton
-                                href="/contact"
-                                label="Get a Free Quote"
-                                variant="secondary"
-                                className="text-lg px-8 py-4"
-                            />
-                        </Link>
+                        <CTAButton
+                            href="/contact"
+                            label="Get a Free Quote"
+                            variant="secondary"
+                            className="text-lg px-8 py-4"
+                        />
                     </div>
                 </div>
             </section>

@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const CTAButton = ({ href, label, variant = "primary", className = "", ...props }) => {
     const base =
@@ -9,19 +10,33 @@ const CTAButton = ({ href, label, variant = "primary", className = "", ...props 
         secondary: "bg-white text-brand border-2 border-brand hover:bg-brand-light hover:text-brand",
     };
 
-    const isExternal = href.startsWith("http") || href.startsWith("https");
+    const isExternal = href.startsWith("http") || href.startsWith("tel:") || href.startsWith("mailto:");
+    const combinedClasses = `${base} ${variants[variant]} ${className}`;
+
+    if (isExternal) {
+        return (
+            <a
+                href={href}
+                className={combinedClasses}
+                aria-label={label}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                {...props}
+            >
+                {label}
+            </a>
+        );
+    }
 
     return (
-        <a
-            href={href}
-            className={`${base} ${variants[variant]} ${className}`}
+        <Link
+            to={href}
+            className={combinedClasses}
             aria-label={label}
-            target={isExternal ? "_blank" : undefined}
-            rel={isExternal ? "noopener noreferrer" : undefined}
             {...props}
         >
             {label}
-        </a>
+        </Link>
     );
 };
 

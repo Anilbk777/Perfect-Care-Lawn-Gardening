@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { BUSINESS_INFO, SOCIAL_MEDIA } from "../utils/constants";
-import { Phone, Mail, MessageCircle, MapPin, Facebook } from "lucide-react";
+import { Phone, Mail, MessageCircle, MapPin, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
     return (
@@ -121,6 +121,15 @@ const Footer = () => {
                         >
                             <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
                         </svg>
+                    </a>
+                    <a
+                        href={SOCIAL_MEDIA.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white hover:text-brand-light transition-colors p-2 rounded-full bg-white/10 hover:bg-white/20"
+                        title="Follow us on Instagram"
+                    >
+                        <Instagram size={24} />
                     </a>
                 </div>
                 <p className="text-gray-200">© {new Date().getFullYear()} Perfect Care Lawn & Gardening. All rights reserved.</p>

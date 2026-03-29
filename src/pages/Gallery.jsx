@@ -7,6 +7,7 @@ const Gallery = () => {
     // Gallery images - using the available generated images
     // TODO: Replace with real photos of your actual work
     const galleryImages = [
+
         {
             image: "/images/image3.jpeg",
             alt: "Beautifully maintained lawn with perfect stripes in Auckland",
@@ -88,6 +89,81 @@ const Gallery = () => {
             image: "/images/image2.jpg",
             alt: "image2 ",
             title: "image2",
+        },
+        {
+            image: "/images/2026-02-03.webp",
+            alt: "Recent lawn care work",
+            title: "Recent Work",
+        },
+        {
+            image: "/images/2026-02-05.webp",
+            alt: "Recent lawn care work",
+            title: "Recent Work",
+        },
+        {
+            image: "/images/2026-02-05 (1).webp",
+            alt: "Recent lawn care work",
+            title: "Recent Work",
+        },
+        {
+            image: "/images/2026-02-14.webp",
+            alt: "Recent lawn care work",
+            title: "Recent Work",
+        },
+        {
+            image: "/images/2026-02-19.webp",
+            alt: "Recent lawn care work",
+            title: "Recent Work",
+        },
+        {
+            image: "/images/2026-02-19 (1).webp",
+            alt: "Recent lawn care work",
+            title: "Recent Work",
+        },
+        {
+            image: "/images/2026-03-06.webp",
+            alt: "Recent lawn care work",
+            title: "Recent Work",
+        },
+        {
+            image: "/images/2026-03-22.webp",
+            alt: "Recent lawn care work",
+            title: "Recent Work",
+        },
+        {
+            image: "/images/unnamed.webp",
+            alt: "Our gardening results",
+            title: "Gardening Results",
+        },
+        {
+            image: "/images/unnamed (1).webp",
+            alt: "Our gardening results",
+            title: "Gardening Results",
+        },
+        {
+            image: "/images/unnamed (2).webp",
+            alt: "Our gardening results",
+            title: "Gardening Results",
+        },
+        {
+            image: "/images/unnamed (3).webp",
+            alt: "Our gardening results",
+            title: "Gardening Results",
+        },
+        {
+            image: "/images/Lawn+Fertilization.webp",
+            alt: "Lawn Fertilization Service",
+            title: "Lawn Fertilization",
+        },
+        {
+            image: "/images/weed-control.webp",
+            alt: "Weed Control Service",
+            title: "Weed Control",
+        },
+        {
+            image: "/images/seasonal-cleanups.webp",
+            alt: "Seasonal Cleanups",
+            title: "Seasonal Cleanups",
         },
     ];
 

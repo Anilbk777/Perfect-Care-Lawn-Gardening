@@ -21,7 +21,7 @@ export const BUSINESS_INFO = {
 export const SOCIAL_MEDIA = {
     facebook: "https://www.facebook.com/people/Perfect-Care-Lawn-Gardening/61586164674388/",
     tiktok: "https://www.tiktok.com/@perfect.care4?_r=1&_t=ZS-93ZqcZUBrdc",
-    instagram: "",
+    instagram: "https://www.instagram.com/perfectcarea1/",
 };
 
 export const BUSINESS_HOURS = {

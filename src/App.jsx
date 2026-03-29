@@ -12,7 +12,7 @@ import Contact from "./pages/Contact.jsx";
 
 function App() {
   return (
-    <Router>
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <ScrollToTop />
       {/* Global layout */}
       <Header />
