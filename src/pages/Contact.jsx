@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from "react";
 import SEOHead from "../components/SEOHead.jsx";
 import MapSection from "../components/MapSection.jsx";
 import { SEO_CONFIG } from "../utils/seo";
@@ -5,6 +6,17 @@ import { BUSINESS_INFO, BUSINESS_HOURS } from "../utils/constants";
 import { Phone, MessageCircle, Mail, MapPin, CheckCircle2, Smartphone } from "lucide-react";
 
 const Contact = () => {
+    const [formLoadCount, setFormLoadCount] = useState(0);
+    const formContainerRef = useRef(null);
+
+    useEffect(() => {
+        // When formLoadCount is 2, it means the form was just submitted.
+        // We smooth-scroll to the top of the form container so the "Thank You" message is visible.
+        if (formLoadCount >= 2 && formContainerRef.current) {
+            formContainerRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }, [formLoadCount]);
+
     return (
         <>
             <SEOHead
@@ -138,7 +150,7 @@ const Contact = () => {
 
                 {/* Google Form Section - Centered */}
                 <div className="max-w-3xl mx-auto">
-                    <div className="bg-white p-4 md:p-8 rounded-lg shadow-xl border border-gray-100">
+                    <div ref={formContainerRef} className="bg-white p-4 md:p-8 rounded-lg shadow-xl border border-gray-100">
                         <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">
                             Request a Detailed Quote
                         </h2>
@@ -146,8 +158,18 @@ const Contact = () => {
                             Fill out the form below and we will get back to you with an accurate estimate.
                         </p>
                         <div className="w-full flex justify-center overflow-hidden">
-                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdkJs-n7XbprT-EYShqqvsS44SCdfry_nrrZ1GZQG617yT_6A/viewform?embedded=true&hl=en" width="640" height="2002" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
+                            <iframe 
+                                src="https://docs.google.com/forms/d/e/1FAIpQLSdkJs-n7XbprT-EYShqqvsS44SCdfry_nrrZ1GZQG617yT_6A/viewform?embedded=true&hl=en" 
+                                width="100%" 
+                                height={formLoadCount >= 2 ? "350" : "2002"} 
+                                frameBorder="0" 
+                                marginHeight="0" 
+                                marginWidth="0"
+                                onLoad={() => setFormLoadCount(prev => prev + 1)}
+                                className="w-full max-w-[640px] transition-all duration-500 ease-in-out"
+                            >
+                                Loading…
+                            </iframe>
                         </div>
                     </div>
                 </div>
